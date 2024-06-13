@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/*Header Section*/
+.container {
+    background-color: #222831;
+    color: #FEECE2;
+    position: sticky;
+    top: 0;
+    margin: 0, auto;
+    z-index: 1;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav, ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.nav h2 {
+    cursor: pointer;
+}
+li {
+    padding: 20px;
+    list-style-type: none;
+}
+
+a:hover {
+    color: #8CB9BD;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+.icon {
+    display: none;
+}
+
+/*Content Section*/
+.content_1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.content_1 img {
+    height: 400px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.content_1 p {
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    font-style: italic;
+}
+
+/*Content_2*/
+.content_2 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.content_2 img{
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.content_2 p::first-letter {
+    color: rgb(7, 7, 222);
+    font-size: 30px;
+    font-style: italic;
+}
+.content_2 p {
+    padding: 50px 50px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+/*Content_3*/
+.content_3 img {
+    width: 50%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.content_3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content_3 p {
+    padding: 40px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+.content_3 p::first-letter {
+    color: rgb(7, 7, 222);
+    font-size: 30px;
+    font-style: italic;
+}
+hr {
+    margin: 30px;
+}
+
+/*Gallery*/
+.h1g {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gallery img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image img {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+}
+img:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+}
+
+/*About Section*/
+.h1about {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.AboutSection {
+    color: white;
+    background-color: #222831;
+    margin-bottom: 30px;
+}
+.about {
+    padding-left: 20%;
+}
+
+.branch {
+    font-size: 30px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.state {
+    font-size: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    
+}
+
+@media screen and (max-width:768px) {
+    .content_1, .content_1 p, .content_2, .content_3{
+        display:block;
+    }
+    
+    .content_1 img,.content_2 img, .content_3 img {
+        height: 450px;
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .content_2 img{
+        margin: 0;
+        padding: 0;
+    }
+    .icon {
+        display: block;
+        color: #669706;
+    }
+    
+    .content_3{
+        margin-top: -50px;
+    }
+    
+}
+
+@media screen and (max-width:528px) {
+    .content_1, .content_1 p, .content_2, .content_3{
+        display:block;
+    }
+    .content_1 p{
+        font-size: 40px;
+    }
+    .content_1 img,.content_2 img, .content_3 img {
+        height: 300px;
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .content_2 img{
+        margin: 0;
+        padding: 0;
+    }
+    .icon {
+        display: block;
+        color: #669706;
+    }
+    .nav-links {
+        display: none;
+    }
+    .content_3{
+        margin-top: -50px;
+    }
+}

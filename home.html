@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nature Resort</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <!--Head Section-->
     <div class="container">
         <div class="nav">
             <h2>Nature Resort</h2>
+
             <div class="nav-links">
-                <ul>
+                <ul class="UL_link">
                     <li> <a href="#home">Home</a> </li>
                     <li> <a href="#AboutSection" id="about">About</a> </li>
                     <li> <a href="">ContactUS</a> </li>
@@ -20,19 +22,38 @@
                     <li> <a href="login.html">Login</a> </li>
                 </ul>
             </div>
-            <a href="#" class="icon"> <i class="fa fa-bars"></i> </a>
+            <a href="#" class="icon" onclick="show()"> 
+                <span class="material-symbols-outlined" >
+                    menu
+                </span> 
+            </a>
         </div>
+    </div>
+    <div class="Side_nav-link">
+        <p class="side_x" onclick="closeNav()">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </p>
+        <ul>
+            <li> <a href="#home">Home</a> </li>
+            <li> <a href="#AboutSection" id="about">About</a> </li>
+            <li> <a href="">ContactUS</a> </li>
+            <li> <a href="#gallery">Gallery</a> </li>
+            <li> <a href="login.html">Login</a> </li>
+        </ul>
     </div>
 
     <!--Body Content-->
-    <div class="content_1" id="home">
-        <p>Welcome to resort!</p>
-        <img src="./laptop-4k.jpg" alt="Nature">
-    </div>
+    <div class="body_container">
+        <div class="content_1 item" id="home">
+            <p>Welcome to resort!</p>
+            <img src="./laptop-4k.jpg" alt="Nature">
+        </div>
 
-    <div class="content_2">
-        <img src="./pexels-1.jpeg" alt="Nature 1">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="content_2 item">
+            <img src="./pexels-1.jpeg" alt="Nature 1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Aliquid, dolore pariatur adipisci ut cupiditate nostrum non 
             veritatis rerum atque dolorem ipsa doloribus sunt, placeat 
             ab commodi facere unde odit, officiis voluptas sint possimus?
@@ -43,11 +64,11 @@
             saepe voluptatibus. Amet numquam consequatur ducimus. 
             Vero at distinctio eos ipsum alias facilis dolore, 
             quidem eaque.
-        </p>
-    </div>
+            </p>
+        </div>
 
-    <div class="content_3">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div class="content_3 item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Aliquid, dolore pariatur adipisci ut cupiditate nostrum non 
             veritatis rerum atque dolorem ipsa doloribus sunt, placeat 
             ab commodi facere unde odit, officiis voluptas sint possimus?
@@ -62,8 +83,9 @@
             veritatis rerum atque dolorem ipsa doloribus sunt, placeat 
             ab commodi facere unde odit Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             
-        </p>
-        <img src="./pexels.jpeg" alt="Nature 1">
+            </p>
+            <img src="./pexels.jpeg" alt="Nature 1">
+        </div>
     </div>
     <hr>
     <section id="gallery">
@@ -100,6 +122,6 @@
     </div>
 </div>
 
-    <script src="js.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

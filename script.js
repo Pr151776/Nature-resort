@@ -1,4 +1,4 @@
-var sidenav = document.querySelector(".Side_nav-link");
+const sidenav = document.querySelector(".side_nav_link");
 
 function show() {
     sidenav.style.left = "0"
